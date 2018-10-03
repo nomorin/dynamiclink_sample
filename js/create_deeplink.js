@@ -19,7 +19,7 @@ function createLinks() {
   var nomal_link = createBasicLink(addr, amount, msg, "");
 
   document.getElementById('dynamic').value = dynamic_link;
-  document.getElementById('nomal').value = nomal_link;
+  document.getElementById('nomal').value = nomal_link + DYNAMIC_LINK.DELIMITER;
 }
 
 
@@ -46,7 +46,7 @@ function createBasicLink(addr, amount, msg, name){
   var base_url = DYNAMIC_LINK.BASE_URL
             + 'addr'    + DYNAMIC_LINK.PARAMETER + addr    + DYNAMIC_LINK.DELIMITER
             + 'amount'  + DYNAMIC_LINK.PARAMETER + amount  + DYNAMIC_LINK.DELIMITER
-            + 'msg'     + DYNAMIC_LINK.PARAMETER + msg;
+            + 'msg'     + DYNAMIC_LINK.PARAMETER + encodeURIComponent(msg);
 
   if(name) {
     base_url += DYNAMIC_LINK.DELIMITER
