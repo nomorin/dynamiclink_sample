@@ -20,6 +20,7 @@ function createLinks() {
 
   document.getElementById('dynamic').value = dynamic_link;
   document.getElementById('nomal').value = nomal_link + DYNAMIC_LINK.DELIMITER;
+  document.getElementById('dynamic_txt').value = dynamic_link;
 }
 
 
