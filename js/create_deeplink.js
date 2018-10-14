@@ -83,7 +83,8 @@ function createCheckDeepLink(deeplink){
   var element = document.getElementById("dynamic_txt");
 
   element.innerHTML = "<label for='uname'>確認用 <\/label><br>"
-                    + "<a href='" + deeplink + "'>"
+                    + "<a href='" + deeplink + "'"
+                    + "style='word-break:break-all;'>"
                     + deeplink
                     + "<\/a>";
 }
