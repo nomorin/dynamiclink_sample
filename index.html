@@ -1,31 +1,35 @@
 <!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <title>create link sample</title>
-          <script type="text/javascript" src="./js/create_deeplink.js"></script>
-    </head>
+<html class="no-js" lang="ja">
+  <head>
+      <meta charset="utf-8">
+      <title>create deeplink sample</title>
+      <script type="text/javascript" src="./js/create_deeplink.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/base.css">
+  </head
 
-    <body>
+  <body>
+    <h3>Deep link Maker sample</h3>
 
-      <div>
+    <div class="main-area">
+      <div class="item">
         <label for="uname">送金額</label><br>
-        <input type="number" id="amount" placeholder="amount" value="1" style="width:50%;"><br>
+        <input type="number" id="amount" placeholder="amount" min="0" value="1"><br>
       </div>
 
-      <div>
+      <div class="item">
         <label for="uname">送信先</label><br>
-        <input type="text" id="addr"  pattern="^[0-9A-Za-z]+$" value="NDJHMAGM7R2YLP5TC36BU3GT6SQFSEVISAAF36SR" placeholder="addr" style="width:50%;"> <br>
+        <input type="text" id="addr" pattern="^[0-9A-Za-z]+$"
+          value="NDJHMAGM7R2YLP5TC36BU3GT6SQFSEVISAAF36SR" placeholder="addr"> <br>
       </div>
 
-      <div>
+      <div class="item">
         <label for="uname">メッセージ</label><br>
-        <input type="text" id="msg" placeholder="msg" value="Hello RaccoonWallet!!!" style="width:50%;"><br>
+        <input type="text" id="msg" placeholder="msg" value="Hello RaccoonWallet!!!"><br>
       </div>
 
-      <div>
+      <div class="item">
         <label for="uname">名前</label><br>
-        <input type="text" id="name" placeholder="name" value="test" style="width:50%;"><br>
+        <input type="text" id="name" placeholder="name" value="test"><br>
       </div>
 
       <div>
@@ -33,24 +37,21 @@
           リンク生成
         </button>
       </dev>
-
-      <hr>
+    <hr>
       <div>
         <label for="uname">通常起動リンク </label><br>
-        <textarea id="nomal" placeholder="please push link button" style="width:50%;"></textarea>
+        <textarea id="nomal" placeholder="please push link button"></textarea>
+        <br>
         <button type=button onclick="copyClipbord('nomal')">コピー</button><br>
       </div>
 
       <div>
         <label for="uname">DynamicLink </label><br>
-        <textarea id="dynamic" placeholder="please push link button" style="width:50%;"></textarea>
+        <textarea id="dynamic" placeholder="please push link button"></textarea>
+        <br>
         <button type=button onclick="copyClipbord('dynamic')">コピー</button>
       </div>
-        
-      <div>
-        <label for="uname">確認用 </label><br>
-        <label id="dynamic_txt" style="width:50%;"></textarea>
-      </div>
-
-    </body>
+      <div id="dynamic_txt"></div>
+    </div>
+  </body>
 </html>
